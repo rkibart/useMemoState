@@ -4,7 +4,7 @@ import _isEqual from 'lodash/isEqual'
 
 
 
-export function useMemoState (initialValue)  {
+export function useMemoState (initialValue={})  {
 
 
     // fired once 
@@ -27,7 +27,7 @@ export function useMemoState (initialValue)  {
     } 
     
     
-    console.log('component re-rendered')
+    console.log('component was re-rendered', state)
     return [state, setter]
 }
 
