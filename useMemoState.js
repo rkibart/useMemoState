@@ -27,7 +27,6 @@ export function useMemoState (initialValue={})  {
     } 
     
     
-    console.log('component was re-rendered', state)
     return [state, setter]
 }
 

@@ -26,15 +26,15 @@ describe('The useMemoState', () => {
     // })
     // it('should return state the same type and value as input: array', () => {
     //     const {result} = renderHook(() => useMemoState([1, 2, 'Greg']))
-    //     // expect (result.current[0]).toBe('Raven')
+    //     expect (result.current[0].length).toBe(3)
     //     expect (Array.isArray(result.current[0])).toBe(true)
     // })
 
-    it('', () => {
+    it('should render only once', () => {
         const {result} = renderHook(() => useMemoState({val:1}))
 
         act(() => { 
-            result.current[1]({val:2})
+            result.current[1]({val:1})
 
         })
 
